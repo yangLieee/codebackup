@@ -1,0 +1,13 @@
+
+
+uprobe:/lib/x86_64-linux-gnu/libc.so.6:malloc
+/comm == "memleak"/
+{
+    printf("malloc\n");
+}
+
+uprobe:/lib/x86_64-linux-gnu/libc.so.6:free
+/comm == "memleak"/
+{
+    printf("free\n");
+}

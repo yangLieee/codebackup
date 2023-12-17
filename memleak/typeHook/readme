@@ -1,0 +1,9 @@
+/*
+ *  说明：
+ *   1. 必须定义 _GNU_SOURCE 功能测试宏才能从 <dlfcn.h> 获取 RTLD_DEFAULT 和 RTLD_NEXT 的定义
+ *   2. 编译命令：gcc -shared -fPIC myHookLib.c -ldl -o myHookLib.so; 
+                  gcc main.c -o test_demo;
+ *   3. 执行命令：LD_PRELOAD=./myHookLib.so ./test_demo
+ *
+ *
+ */
